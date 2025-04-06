@@ -2,7 +2,7 @@
 
 基于Dlib的实时人脸检测与识别系统，支持人脸注册、特征提取和实时识别功能。
 
-详细的实现分析与实验结果请查看我的博客文章：[人脸识别系统实现：ARM平台DMS驾驶员身份验证解决方案](https://onef1shy.github.io/2024/09/10/face-recognition/)
+详细的实现分析与实验结果请查看我的博客文章：[人脸识别系统实现：ARM平台DMS驾驶员身份验证解决方案](https://onef1shy.github.io/2024/09/10/face_recognition/)
 
 ## 项目简介
 
