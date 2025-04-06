@@ -1,0 +1,119 @@
+# 人脸识别系统
+
+基于Dlib的实时人脸检测与识别系统，支持人脸注册、特征提取和实时识别功能。
+
+## 功能特点
+
+- 📸 **人脸注册**：通过摄像头采集并注册新的人脸
+- 🔍 **特征提取**：基于深度学习模型提取128维人脸特征向量
+- 👤 **实时识别**：支持实时视频流中的人脸识别
+- 🚗 **驾驶员监控**：专为驾驶员监控系统(DMS)场景优化
+
+## 系统架构
+
+本项目由三个主要组件构成：
+
+1. **人脸注册模块** (`get_faces.py`)：采集新用户的人脸图像
+2. **特征提取模块** (`features_extraction.py`)：从采集的图像中提取特征向量
+3. **人脸识别模块** (`face_reco.py`)：实时识别摄像头中的人脸
+
+## 技术栈
+
+- Python 3.6+
+- Dlib (用于人脸检测与特征提取)
+- OpenCV (图像处理与视频流)
+- NumPy (数值计算)
+- Pandas (数据处理)
+- Pillow (图像处理，特别是中文显示)
+
+## 安装说明
+
+### 前提条件
+
+- Python 3.6+
+- pip 包管理器
+
+### 安装步骤
+
+1. 克隆仓库
+   ```bash
+   git clone https://github.com/用户名/Face_recognition.git
+   cd Face_recognition
+   ```
+
+2. 安装依赖
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. 下载预训练模型
+   
+   系统需要两个预训练模型，应放置在 `data/data_dlib/` 目录下：
+   - `shape_predictor_68_face_landmarks.dat`
+   - `dlib_face_recognition_resnet_model_v1.dat`
+   
+   如果你克隆了完整仓库，这些文件应已包含。
+
+## 使用指南
+
+### 1. 注册新人脸
+
+```bash
+python get_faces.py
+```
+
+操作说明：
+- 按 `N` 键：创建新人脸文件夹
+- 按 `S` 键：保存当前人脸图像
+- 按 `Q` 键：退出程序
+
+建议为每个人采集10-20张不同角度的人脸图像。
+
+### 2. 提取特征
+
+```bash
+python features_extraction.py
+```
+
+此步骤将处理所有注册的人脸图像，提取特征向量并保存到 `data/features_all.csv` 文件。
+
+### 3. 运行人脸识别
+
+```bash
+python face_reco.py
+```
+
+系统将启动摄像头，实时识别出现的人脸。
+
+## 项目结构
+
+```
+Face_recognition/
+├── data/
+│   ├── data_dlib/                  # Dlib预训练模型
+│   │   ├── shape_predictor_68_face_landmarks.dat
+│   │   └── dlib_face_recognition_resnet_model_v1.dat
+│   ├── data_faces_from_camera/     # 人脸图像存储
+│   │   └── person_1/               # 每个人的人脸文件夹
+│   └── features_all.csv            # 提取的人脸特征数据
+├── get_faces.py                    # 人脸注册程序
+├── features_extraction.py          # 特征提取程序
+├── face_reco.py                    # 人脸识别程序
+├── requirements.txt                # 项目依赖
+└── simsun.ttc                      # 中文字体文件
+```
+
+## 注意事项
+
+1. 人脸注册时，确保光线充足，面部清晰
+2. 特征提取需要在注册人脸后进行
+3. 最佳识别距离约为30-50厘米
+4. 为提高识别准确率，请在不同光线和角度下采集人脸
+
+## 许可证
+
+[请在此处添加许可证信息]
+
+## 联系方式
+
+[请在此处添加联系方式] 
