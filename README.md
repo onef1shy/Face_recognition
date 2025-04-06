@@ -2,7 +2,7 @@
 
 基于Dlib的实时人脸检测与识别系统，支持人脸注册、特征提取和实时识别功能。
 
-详细的实现分析请查看我的博客文章：[人脸识别系统实现：ARM平台DMS驾驶员身份验证解决方案](https://onef1shy.github.io/2024/09/10/face_recognition/)
+详细的实现分析与实验结果请查看我的博客文章：[人脸识别系统实现：ARM平台DMS驾驶员身份验证解决方案](https://onef1shy.github.io/2024/09/10/face-recognition/)
 
 ## 项目简介
 
@@ -129,4 +129,8 @@ MIT License © [onef1shy](https://github.com/onef1shy)
 
 ## ⭐ 支持项目
 
-欢迎 Fork 和 Star ⭐，也欢迎提出建议和PR～ 
+欢迎 Fork 和 Star ⭐，也欢迎提出建议和PR～
+
+## 致谢
+
+本项目参考了 [Dlib_face_recognition_from_camera](https://github.com/coneypo/Dlib_face_recognition_from_camera) 项目的实现思路和框架，在此基础上进行了重构和优化，特别针对ARM平台和驾驶员监控系统(DMS)场景进行了改进。感谢原作者 [@coneypo](https://github.com/coneypo) 的开源贡献。 
