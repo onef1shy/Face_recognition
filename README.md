@@ -37,7 +37,7 @@
 
 1. 克隆仓库
    ```bash
-   git clone https://github.com/用户名/Face_recognition.git
+   git clone https://github.com/onef1shy/Face_recognition.git
    cd Face_recognition
    ```
 
